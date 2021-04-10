@@ -1,0 +1,185 @@
+{%extends 'base.html'%}
+{%block title%}
+Admission
+{%endblock%}
+{%block css%}
+<style>
+.note
+{
+    font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    height: auto;
+    color: rgb(26, 25, 25);
+    font-weight: bold;
+    line-height: 80px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    background-color: #ced4da;
+}
+.form-content
+{
+    padding: 5%;
+    border: 1px solid #ced4da;
+    margin-bottom: 2%;
+    border-radius: 8px;
+}
+.form-control{
+    border-radius:1.5rem;
+}
+.btnSubmit
+{
+    border:none;
+    border-radius:1.5rem;
+    padding: 1%;
+    width: 20%;
+    cursor: pointer;
+    background: #0062cc;
+    color: #fff;
+}
+textarea{
+    height:16px;
+}
+.form label {
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  //background: linear-gradient((rgb(0, 0, 0), rgb(59, 59, 59));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
+.form {
+    background-color: #ced4da;
+    border-radius: 25px;
+  
+</style>
+{%endblock%}
+
+{%block body%}
+<div style="background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 100%, #070707 100%);" >
+
+<form method="POST" >   
+    {%csrf_token%}
+<div class="container register-form">
+    {% if messages %}
+    <ul >
+    <center>
+        {% for message in messages %}
+        <p{% if message.tags %} class="alert alert-{{ message.tags }}"{% endif %}>{{ message }}</p>
+        {% endfor %}
+    </center>
+    </ul>
+    {% endif %}
+    <div class="form" style="background-color: #ced4da;">
+        <div class="note">
+         
+            <p>Student Admission Form</p>
+        </div>
+
+        <div class="form-content">
+            <div class="row">
+                <div class="col-md-6">
+                <label>Student ID :</label>
+                <div class="row">
+                
+                <div class="col-md-4"><div class="form-group"> {{form.year_of_addmission}}</div></div>
+                
+                <div class="col-md-4"><div class="form-group">{{form.role_no}}</div></div>
+                
+                </div>
+                </div>
+                <div class="col-md-6">
+                <br></div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Student Name:</label>
+                        {{form.stud_name}}
+                    </div>
+                    <div class="form-group">
+                        <label>Mother Name:</label>
+                        {{form.mat_name}}
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Father Name:</label>
+                        {{form.fat_name}}
+                        
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        {{form.email}}
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Qualification</label>
+                        {{form.qualification}}
+                        
+                    </div>
+                    <div class="form-group">
+                        <label>Gender</label>
+                        {{form.gender}}
+                    </div>
+                </div>
+                 <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Caste</label>
+                        {{form.caste}}
+                        
+                    </div>
+                    <div class="form-group">
+                        <label>Religion</label>
+                        {{form.religion}}
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Select Course:</label>
+                        {{form.course}}
+                        
+                    </div>
+                    <div class="form-group">
+                        <label>Select Desire time:</label>
+                        {{form.des_time}}
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Full Address</label>
+                        {{form.address}}
+                        
+                    </div>
+                    <div class="form-group">
+                        <label>Student Number</label>
+                        {{form.stud_number}}
+                        
+                    </div>
+                </div>
+                <div class="col-md-6">
+                   
+                    <div class="form-group">
+                        <label>Perents Number</label>
+                        {{form.pre_number}}
+                    </div>
+                    <div class="form-group">
+                        <label></label>
+                    </div>
+                </div>
+            </div><center>
+            <button type="submit" class="btnSubmit">Submit</button></center>
+        </div>
+    </div>
+</div>
+</form>
+<br>
+<br>
+</div>
+
+{%endblock%}

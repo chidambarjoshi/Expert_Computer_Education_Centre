@@ -1,0 +1,140 @@
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>
+            {{stud.stud_name}}
+            
+        </title>
+        <link rel="icon" href="{%  static 'favicon.ico' %} "type= "image/icon">
+        <link rel="stylesheet" type = "text/css" href = "{% static 'bootstrap/css/bootstrap.css'%}"/>
+        {%block css%}
+        {%endblock%}
+        <script src="{% static 'fontawesome/js/all.min.js' %}"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css" />
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      
+       
+            <style>
+            .note
+            {
+                font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+                font-size: 1.5rem;
+                line-height: 1.5rem;
+                text-align: center;
+                height: auto;
+                color: rgb(26, 25, 25);
+                font-weight: bold;
+                
+                
+                border-radius: 8px;
+                
+            }
+            table, th, td {
+            border: 0px solid black;
+            padding: 2;
+            
+            }
+
+        </style>
+    </head>
+    <body >         
+                <center>
+                    <p style="line-height:0;">
+                <span style="font-size: 40px;font-weight: 500; ">Expert Computer Education Centre</span> <br><br>
+                <strong>
+                <span style="font-size: 20px; ">"To Provide best quality of knowledge of Computer skills"</span><br></strong>
+                <hr>
+                
+               
+                <br>
+                <h2 style="font-size: 5;">Student Registration Form</h2>
+           
+                </center>
+            <br>
+            <table style="line-height:0;" >
+                <tbody style="font-size: 4;">
+                  
+                    <tr>
+                        <td colspan="2">  Student ID: {{stud.student_id}}</td>
+                    </tr><tr>
+                      <td colspan="2">  Student Name: {{stud.stud_name}}</td>
+                       
+                    </tr>
+                    <center>
+                    <tr>
+                        <td> Father Name: {{stud.fat_name}}</td>
+                        <td>Mother Name: {{stud.mat_name}}</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Email: {{stud.email}}</td>
+                        <td>Qualification: {{stud.qualification}}</td>
+                       
+                    </tr>
+                        <td>Caste: {{stud.caste}}</td>
+                       <td> Gender: {{stud.gender}}</td>
+                        
+                    <tr>
+                        <td>Religion: {{stud.religion}}</td>
+                       <td> Course: {{stud.course}}</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Desire Time: {{stud.des_time}}</td>
+                       <td> Full Address: {{stud.address}}</td>
+                        
+                       
+                    </tr>
+                    <tr>
+                        <td>Student Number: {{stud.stud_number}}</td>
+                        <td>Parents Number: {{stud.pre_number}}</td>
+                        
+                    </tr>
+                   
+                </tbody>
+            </table>
+        </center>
+            <br><br>
+            <br><br><br>
+            <table style="margin-right: 50px;">
+                <tr>
+                    <td  style="font-size: 4; text-decoration:overline;">
+                       
+                        <strong style="text-decoration:overline;">Signature of Student</strong>
+                    </td>
+            <td style="text-align: right;font-size: 4;text-decoration:overline; ">
+                
+                <strong style="text-decoration:overline">Signature of Institute Head</strong> </td>
+            
+        </tr>
+        </table>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br><br>
+                
+                <center>
+                    
+                    <strong>
+                    <hr><br>
+                    <span style="font-size: 15px; ">Kittur Rani Channamma Samadhi Road, Bailhongal - 591102 </span><br>
+                    <span style="font-size: 15px;" >Email:  expertcomputer153@gmail.com &nbsp;&nbsp; Phone No : +91 8550855843</span></p>
+            </strong>
+                </center>
+    </body>
+    </html>

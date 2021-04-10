@@ -1,0 +1,188 @@
+<html>
+
+    <html lang="en">
+    <head>
+        {%load static%}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>
+            {%block title%}
+            {%endblock%}
+            
+        </title>
+        <link rel="icon" href="{%  static 'favicon1.ico' %} "type= "image/icon">
+        <link rel="stylesheet" type = "text/css" href = "{% static 'bootstrap/css/bootstrap.css'%}"/>
+        {%block css%}
+        {%endblock%}
+        <script src="{% static 'fontawesome/js/all.min.js' %}"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css" />
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <style>
+            .note
+            {
+                font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+                font-size: 1.5rem;
+                line-height: 1.5rem;
+                text-align: center;
+                height: auto;
+                color: rgb(26, 25, 25);
+                font-weight: bold;
+                line-height: 80px;
+                border: 1px solid #ced4da;
+                border-radius: 8px;
+                background-color: #ced4da;
+            }
+            .form-content
+            {
+                padding: 5%;
+                border: 1px solid #ced4da;
+                margin-bottom: 2%;
+                border-radius: 8px;
+            }
+            .form-control{
+                border-radius:1.5rem;
+            }
+            .btnSubmit
+{
+    border:none;
+    border-radius:1.5rem;
+    padding: 1%;
+    width: 20%;
+    cursor: pointer;
+    background: #0062cc;
+    color: #fff;
+}
+            
+            
+             label {
+              font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+              font-size: 1.5rem;
+              line-height: 1.5rem;
+              background: linear-gradient((rgb(0, 0, 0), rgb(59, 59, 59));
+              -webkit-text-fill-color: transparent;
+              -webkit-background-clip: text;
+                      background-clip: text;
+            }
+            
+            .form {
+                background-color: #ced4da;
+                border-radius: 25px;
+            }
+        </style>
+        
+    </head>
+    <body >
+        {%include 'navbar.html'%}
+        <div class="card">
+            <div class="card-body">
+                <CENTER>
+            <h1>Expert Computer Classes</h1></CENTER>
+            </div>
+        </div>
+        <div class="form" style="background-color: #ced4da;">
+            <div class="note">
+                <p>Student Details</p>
+            </div>
+        <div class="container">
+        <div class="form-content">
+            <div class="row">
+               
+                <div class="col-md-6">
+                    {%if stud.student_id %}
+                        <div class="form-group">
+                            <label>Student ID: {{stud.student_id}}</label>
+                        </div>
+                    {%endif%}
+                    <div class="form-group">
+                        <label>Student Name: {{stud.stud_name}}</label>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label>Mother Name: {{stud.mat_name}}</label>
+                        
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Father Name:  {{stud.fat_name}}</label>
+                       
+                        
+                    </div>
+                    <div class="form-group">
+                        <label>Email: {{stud.email}}</label>
+                        
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Qualification:  {{stud.qualification}}</label>
+                       
+                        
+                    </div>
+                    <div class="form-group">
+                        <label>Gender: {{stud.gender}}</label>
+                        
+                    </div>
+                </div>
+                 <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Caste: {{stud.caste}}</label>
+                        
+                        
+                    </div>
+                    <div class="form-group">
+                        <label>Religion: {{stud.religion}}</label>
+                        
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <strong><label>Select Course: {{stud.course}}</label></strong>
+                        
+                        
+                    </div>
+                    <div class="form-group">
+                        <strong><label>Select Desire time: {{stud.des_time}}</label></strong>
+                        
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Full Address: {{stud.address}}</label>
+                        
+                        
+                    </div>
+                    <div class="form-group">
+                        <label>Student Number: {{stud.stud_number}}</label>
+                        
+                        
+                    </div>
+                </div>
+                <div class="col-md-6">
+                   
+                    <div class="form-group">
+                        <label>Parents Number: {{stud.pre_number}}</label>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label></label>
+                    </div>
+                </div>
+            </div>
+                <div style="text-align: center;">
+                        <a href=/download_details/{{stud.id}}>
+                        <button type="submit" class="btnSubmit">Download pdf</button></a></center>
+                    </div>
+            
+        </div>
+        
+
+    </div>
+
+</body>
+</html>

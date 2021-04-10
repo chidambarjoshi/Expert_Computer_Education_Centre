@@ -1,0 +1,1 @@
+web: gunicorn expertclass.wsgi --log-file -
